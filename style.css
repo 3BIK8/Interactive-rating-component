@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Overpass", sans-serif;
+	transition: all 0.3s;
+}
+
+:root {
+	--Orange: hsl(25, 97%, 53%);
+	--White: hsl(0, 0%, 100%);
+	--Light-Grey: hsl(217, 12%, 63%);
+	--Medium-Grey: hsl(216, 12%, 54%);
+	--Dark-Blue: hsl(213, 19%, 18%);
+	--Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+.attribution,
+.attribution:hover a,
+button,
+h1,
+h2,
+.num.visited,
+.num:hover {
+	color: var(--White);
+}
+.attribution {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+}
+.attribution:hover,
+.attribution a,
+button:hover,
+.selected {
+	color: var(--Orange);
+}
+
+.attribution a,
+.num {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+html {
+	background-color: #141519;
+}
+h1,
+h2 {
+	font-size: 2.5rem;
+	text-transform: capitalize;
+	margin: 1rem auto;
+}
+main,
+.num,
+.star,
+.selected {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.num,
+.star {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+}
+.num:hover,
+button {
+	background-color: var(--Orange);
+}
+.star,
+.num,
+.selected {
+	background-color: var(--Dark-Blue);
+}
+.num,
+p {
+	color: var(--Light-Grey);
+}
+main {
+	height: 100vh;
+}
+section {
+	background: linear-gradient(var(--Very-Dark-Blue), var(--Dark-Blue));
+	padding: 1rem;
+	max-width: 350px;
+	max-height: 400px;
+	border-radius: 1.5rem;
+	box-shadow: -1px 10px 20px 20px rgba(0, 0, 0, 0.23);
+}
+p,
+.star,
+button,
+.select {
+	margin: 1rem 0;
+}
+.select {
+	display: flex;
+	justify-content: space-evenly;
+}
+.num,
+.selected,
+.attribution {
+	font-size: 18px;
+}
+.star img {
+	width: 1.5rem;
+}
+button {
+	width: 100%;
+	height: 3rem;
+	border-radius: 5rem;
+	font-size: 20px;
+	border: none;
+}
+button:hover {
+	background-color: var(--White);
+}
+.num.visited {
+	background-color: var(--Light-Grey);
+}
+.num:hover {
+	box-shadow: 0 8px 10px 0 var(--Light-Grey), 0 6px 10px 0 var(--Medium-Grey);
+	transform: translate(0, -5px);
+}
+.thanks {
+	display: none;
+}
+.selected {
+	border-radius: 2rem;
+	font-weight: 400;
+	padding: 1rem;
+	height: 2rem;
+	width: max-content;
+}
+.thanks-img {
+	width: 50%;
+	margin: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+.thanks,
+.attribution {
+	text-align: center;
+}
+@media only screen and (max-width: 745px) {
+	.rating {
+		margin: 15rem auto;
+		min-width: 100vw;
+		min-height: 100vh;
+		border-radius: 0;
+	}
+}
